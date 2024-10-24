@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c05c559103f7c51982abcb7264d546f7",
+    "content-hash": "1a41561826f6a3322708c5c9e20f98c1",
     "packages": [
         {
             "name": "brick/math",
@@ -60,6 +60,78 @@
                 }
             ],
             "time": "2023-01-15T23:15:59+00:00"
+        },
+        {
+            "name": "bschmitt/laravel-amqp",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bschmitt/laravel-amqp.git",
+                "reference": "4385439d865bbf7c5b3b953d1926488deb044f65"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bschmitt/laravel-amqp/zipball/4385439d865bbf7c5b3b953d1926488deb044f65",
+                "reference": "4385439d865bbf7c5b3b953d1926488deb044f65",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=6.20.0",
+                "php": "^7.3|^8.0",
+                "php-amqplib/php-amqplib": "^3.0"
+            },
+            "require-dev": {
+                "illuminate/config": ">=5.5",
+                "mockery/mockery": "^1.2",
+                "phpoption/phpoption": "1.7.x-dev",
+                "phpunit/phpunit": ">=6.0",
+                "squizlabs/php_codesniffer": "^3.0@dev",
+                "vlucas/phpdotenv": "^5.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Bschmitt\\Amqp\\AmqpServiceProvider"
+                    ],
+                    "aliases": {
+                        "Amqp": "Bschmitt\\Amqp\\Facades\\Amqp"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bschmitt\\Amqp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Björn Schmitt",
+                    "email": "code@bjoern.io"
+                }
+            ],
+            "description": "AMQP wrapper for Laravel and Lumen to publish and consume messages",
+            "keywords": [
+                "AMQP",
+                "Björn Schmitt",
+                "bschmitt",
+                "laravel",
+                "laravel5",
+                "lumen",
+                "message queue",
+                "package",
+                "queue",
+                "rabbitmq"
+            ],
+            "support": {
+                "issues": "https://github.com/bschmitt/laravel-amqp/issues",
+                "source": "https://github.com/bschmitt/laravel-amqp"
+            },
+            "time": "2023-02-18T20:19:40+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -5777,6 +5849,70 @@
             "time": "2023-12-08T13:03:43+00:00"
         },
         {
+            "name": "vladimir-yuldashev/laravel-queue-rabbitmq",
+            "version": "v14.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vyuldashev/laravel-queue-rabbitmq.git",
+                "reference": "3d58891479582ebe988df7c3303efa4784dabccd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vyuldashev/laravel-queue-rabbitmq/zipball/3d58891479582ebe988df7c3303efa4784dabccd",
+                "reference": "3d58891479582ebe988df7c3303efa4784dabccd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/queue": "^10.0|^11.0",
+                "php": "^8.0",
+                "php-amqplib/php-amqplib": "^v3.6"
+            },
+            "require-dev": {
+                "laravel/framework": "^9.0|^10.0|^11.0",
+                "laravel/horizon": "^5.0",
+                "laravel/pint": "^1.2",
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^7.0|^8.0|^9.0",
+                "phpunit/phpunit": "^10.0|^11.0"
+            },
+            "suggest": {
+                "ext-pcntl": "Required to use all features of the queue consumer."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "13.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "VladimirYuldashev\\LaravelQueueRabbitMQ\\LaravelQueueRabbitMQServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "VladimirYuldashev\\LaravelQueueRabbitMQ\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vladimir Yuldashev",
+                    "email": "misterio92@gmail.com"
+                }
+            ],
+            "description": "RabbitMQ driver for Laravel Queue. Supports Laravel Horizon.",
+            "support": {
+                "issues": "https://github.com/vyuldashev/laravel-queue-rabbitmq/issues",
+                "source": "https://github.com/vyuldashev/laravel-queue-rabbitmq/tree/v14.1.0"
+            },
+            "time": "2024-04-26T22:36:00+00:00"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v5.6.0",
             "source": {
@@ -8431,5 +8567,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }

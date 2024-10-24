@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendWelcomeEmail;
 use Illuminate\Support\Facades\Log;
 use PhpAmqpLib\Message\AMQPMessage;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
@@ -38,5 +39,18 @@ class RabbitMQController extends Controller
 
         $channel->close();
         $connection->close();
+    }
+
+    public function sequency()
+    {
+        $user = [
+            'name' => 'Renato',
+            'email' => 'cpdrenato@gmail.com'
+        ];
+
+        SendWelcomeEmail::withChain([
+            new SendFollowUpEmail($user),
+            new NotifyAdmin($user)
+        ])->dispatch($user);
     }
 }

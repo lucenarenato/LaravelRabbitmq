@@ -160,6 +160,8 @@ return [
          * Package Service Providers...
          */
 
+         Bschmitt\Amqp\AmqpServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
